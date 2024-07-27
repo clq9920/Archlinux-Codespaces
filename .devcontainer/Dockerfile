@@ -11,9 +11,7 @@ RUN pacman -Syu --noprogressbar --noconfirm
 RUN pacman -S base base-devel git lib32-gcc-libs lib32-glibc --noprogressbar --needed --noconfirm
 
 # Install dependencies required by vscode codespaces
-RUN pacman -S gcr liburcu openssl-1.0 krb5 icu zlib \
-	gnome-keyring libsecret \
-	desktop-file-utils xorg-xprop xdg-utils --noprogressbar --needed --noconfirm
+RUN pacman -S gcr liburcu openssl krb5 icu zlib gnome-keyring libsecret desktop-file-utils xorg-xprop xdg-utils --noprogressbar --needed --noconfirm
 
 # Add user vscode, group wheel
 RUN /usr/sbin/useradd -m -G wheel -g users vscode && \
