@@ -9,9 +9,10 @@ RUN pacman -Syu --noprogressbar --noconfirm
 
 # Install essentials, dev essentials and git
 RUN pacman -S base base-devel git lib32-gcc-libs lib32-glibc --noprogressbar --needed --noconfirm
+RUN pacman -S base base-devel git lib32-gcc-libs lib32-glibc --noprogressbar --needed --noconfirm
 
 # Install dependencies required by vscode codespaces
-RUN pacman -S gcr liburcu openssl krb5 icu zlib gnome-keyring libsecret desktop-file-utils xorg-xprop xdg-utils --noprogressbar --needed --noconfirm
+# RUN pacman -S gcr liburcu openssl krb5 icu zlib gnome-keyring libsecret desktop-file-utils xorg-xprop xdg-utils --noprogressbar --needed --noconfirm
 
 
 # Add user vscode, group wheel
@@ -29,7 +30,7 @@ RUN cd /tmp && \
 
 # RUN su vscode -c "yay zsh zsh-theme-powerlevel10k-git zsh-autosuggestions grml-zsh-config zsh-syntax-highlighting zsh-completions --noprogressbar --needed --noconfirm"
 
-RUN su vscode -c "yay -S zsh zsh-theme-powerlevel10k-git zsh-autosuggestions grml-zsh-config zsh-syntax-highlighting zsh-completions nano vim sbcl htop --noconfirm"
+RUN su vscode -c "yay -S zsh zsh-theme-powerlevel10k-git zsh-autosuggestions grml-zsh-config zsh-syntax-highlighting zsh-completions nano vim sbcl htop aria2 unarchiver --noconfirm"
 
 # Set correct locale
 RUN echo "LC_ALL=en_US.UTF-8" >> /etc/environment && \
