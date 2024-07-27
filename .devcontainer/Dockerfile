@@ -8,9 +8,7 @@ RUN echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 RUN pacman -Syu --noprogressbar --noconfirm
 
 # Install essentials, dev essentials and git
-RUN pacman -S base base-devel \
-	git \
-	lib32-gcc-libs lib32-glibc --noprogressbar --needed --noconfirm
+RUN pacman -S base base-devel git lib32-gcc-libs lib32-glibc --noprogressbar --needed --noconfirm
 
 # Install dependencies required by vscode codespaces
 RUN pacman -S gcr liburcu openssl-1.0 krb5 icu zlib \
