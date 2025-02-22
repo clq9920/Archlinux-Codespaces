@@ -13,5 +13,10 @@
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
 	"extensions": [],
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"hostRequirements": {
+		"cpus": 8,
+		"memory": "8gb",
+		"storage": "32gb"
+}
 }
