@@ -15,8 +15,8 @@
 	"extensions": [],
 	"remoteUser": "vscode",
 	"hostRequirements": {
-		"cpus": 8,
+		"cpus": 2,
 		"memory": "8gb",
-		"storage": "32gb"
+		"storage": "64gb"
 }
 }
